@@ -2,112 +2,168 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* DAENA - Sistema de diseño premium */
 
 @layer base {
   :root {
+    /* Base Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 240 15% 9%;
 
+    /* Cards & Surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 240 15% 9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 240 15% 9%;
 
-    /* DAENA Lavender Theme */
-    --primary: 290 75% 60%; /* #be5fd6 lavender */
+    /* DAENA Premium Palette */
+    --primary: 270 75% 65%; /* Rich lavender #9f5cd6 */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 290 60% 85%; /* Lighter lavender */
-    --primary-glow: 290 85% 70%; /* Glowing lavender */
+    --primary-light: 275 65% 85%; /* Soft lavender highlight */
+    --primary-dark: 265 85% 45%; /* Deep lavender */
+    --primary-glow: 275 90% 75%; /* Ethereal glow */
+    
+    /* Enhanced Gradients */
+    --gradient-primary: 270 75% 65%, 275 85% 75%;
+    --gradient-aurora: 270 75% 65%, 280 70% 70%, 290 65% 75%;
+    --gradient-sunset: 315 75% 70%, 270 75% 65%, 225 70% 70%;
+    
+    /* Sophisticated Neutrals */
+    --secondary: 240 15% 97.5%; /* Whisper white */
+    --secondary-foreground: 240 25% 15%;
+    --muted: 240 10% 96%; /* Cloud white */
+    --muted-foreground: 240 15% 45%;
+    --accent: 270 30% 92%; /* Lavender mist */
+    --accent-foreground: 270 50% 20%;
 
-    --secondary: 290 40% 96%; /* Very light lavender */
-    --secondary-foreground: 290 50% 25%;
+    /* System Colors */
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 15% 92%;
+    --input: 240 15% 94%;
+    --ring: 270 75% 65%;
 
-    --muted: 290 25% 95%; /* Subtle lavender background */
-    --muted-foreground: 290 20% 50%;
+    /* Premium Shadows */
+    --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    
+    /* DAENA Signature Shadows */
+    --shadow-lavender-xs: 0 2px 8px hsl(var(--primary) / 0.08);
+    --shadow-lavender-sm: 0 4px 12px hsl(var(--primary) / 0.12);
+    --shadow-lavender-md: 0 8px 25px hsl(var(--primary) / 0.15);
+    --shadow-lavender-lg: 0 15px 35px hsl(var(--primary) / 0.2);
+    --shadow-lavender-xl: 0 25px 50px hsl(var(--primary) / 0.25);
+    --shadow-glow: 0 0 60px hsl(var(--primary-glow) / 0.6);
+    --shadow-aurora: 0 8px 32px hsl(var(--primary) / 0.3), 0 0 0 1px hsl(var(--primary) / 0.05);
 
-    --accent: 290 60% 88%; /* Soft lavender accent */
-    --accent-foreground: 290 80% 25%;
+    /* Typography Scale */
+    --text-xs: 0.75rem; /* 12px */
+    --text-sm: 0.875rem; /* 14px */
+    --text-base: 1rem; /* 16px */
+    --text-lg: 1.125rem; /* 18px */
+    --text-xl: 1.25rem; /* 20px */
+    --text-2xl: 1.5rem; /* 24px */
+    --text-3xl: 1.875rem; /* 30px */
+    --text-4xl: 2.25rem; /* 36px */
+    --text-5xl: 3rem; /* 48px */
+    --text-6xl: 3.75rem; /* 60px */
+    --text-7xl: 4.5rem; /* 72px */
+    --text-8xl: 6rem; /* 96px */
+    --text-9xl: 8rem; /* 128px */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Spacing Scale */
+    --space-px: 1px;
+    --space-0: 0px;
+    --space-0-5: 0.125rem; /* 2px */
+    --space-1: 0.25rem; /* 4px */
+    --space-1-5: 0.375rem; /* 6px */
+    --space-2: 0.5rem; /* 8px */
+    --space-2-5: 0.625rem; /* 10px */
+    --space-3: 0.75rem; /* 12px */
+    --space-3-5: 0.875rem; /* 14px */
+    --space-4: 1rem; /* 16px */
+    --space-5: 1.25rem; /* 20px */
+    --space-6: 1.5rem; /* 24px */
+    --space-7: 1.75rem; /* 28px */
+    --space-8: 2rem; /* 32px */
+    --space-9: 2.25rem; /* 36px */
+    --space-10: 2.5rem; /* 40px */
+    --space-11: 2.75rem; /* 44px */
+    --space-12: 3rem; /* 48px */
+    --space-14: 3.5rem; /* 56px */
+    --space-16: 4rem; /* 64px */
+    --space-20: 5rem; /* 80px */
+    --space-24: 6rem; /* 96px */
+    --space-28: 7rem; /* 112px */
+    --space-32: 8rem; /* 128px */
+    --space-36: 9rem; /* 144px */
+    --space-40: 10rem; /* 160px */
+    --space-44: 11rem; /* 176px */
+    --space-48: 12rem; /* 192px */
+    --space-52: 13rem; /* 208px */
+    --space-56: 14rem; /* 224px */
+    --space-60: 15rem; /* 240px */
+    --space-64: 16rem; /* 256px */
+    --space-72: 18rem; /* 288px */
+    --space-80: 20rem; /* 320px */
+    --space-96: 24rem; /* 384px */
 
-    --border: 290 30% 90%;
-    --input: 290 25% 94%;
-    --ring: 290 75% 60%;
+    /* Border Radius */
+    --radius-none: 0px;
+    --radius-sm: 0.125rem; /* 2px */
+    --radius-md: 0.375rem; /* 6px */
+    --radius-lg: 0.5rem; /* 8px */
+    --radius-xl: 0.75rem; /* 12px */
+    --radius-2xl: 1rem; /* 16px */
+    --radius-3xl: 1.5rem; /* 24px */
+    --radius-4xl: 2rem; /* 32px */
+    --radius-full: 9999px;
 
-    /* DAENA Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-soft: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--primary-light)) 100%);
+    /* Advanced Animations */
+    --timing-linear: linear;
+    --timing-ease: ease;
+    --timing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --timing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --timing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --timing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --timing-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --timing-spring: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-    /* DAENA Shadows */
-    --shadow-lavender: 0 10px 30px -10px hsl(var(--primary) / 0.3);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
-    --shadow-card: 0 4px 20px hsl(var(--primary) / 0.1);
-
-    /* DAENA Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Duration Scale */
+    --duration-75: 75ms;
+    --duration-100: 100ms;
+    --duration-150: 150ms;
+    --duration-200: 200ms;
+    --duration-300: 300ms;
+    --duration-500: 500ms;
+    --duration-700: 700ms;
+    --duration-1000: 1000ms;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 240 15% 6%;
+    --foreground: 240 10% 95%;
+    --card: 240 15% 8%;
+    --card-foreground: 240 10% 95%;
+    --popover: 240 15% 8%;
+    --popover-foreground: 240 10% 95%;
+    --primary: 270 75% 70%;
+    --primary-foreground: 240 15% 6%;
+    --secondary: 240 15% 12%;
+    --secondary-foreground: 240 10% 85%;
+    --muted: 240 15% 10%;
+    --muted-foreground: 240 10% 60%;
+    --accent: 240 15% 14%;
+    --accent-foreground: 240 10% 85%;
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 240 10% 95%;
+    --border: 240 15% 18%;
+    --input: 240 15% 16%;
+    --ring: 270 75% 70%;
   }
 }
 
@@ -117,6 +173,159 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter antialiased;
+    font-feature-settings: "cv11", "ss01";
+    font-variation-settings: "opsz" 32;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+    font-feature-settings: "ss01", "ss02";
+  }
+}
+
+/* Premium Components */
+@layer components {
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20;
+  }
+  
+  .glass-effect-dark {
+    @apply bg-black/20 backdrop-blur-xl border border-white/10;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent;
+  }
+
+  .floating-card {
+    @apply transform transition-all duration-300 hover:scale-105 hover:-translate-y-2;
+  }
+
+  .magnetic-hover {
+    @apply transition-transform duration-200 ease-out;
+  }
+
+  .magnetic-hover:hover {
+    @apply scale-105;
+  }
+
+  .aurora-border {
+    @apply relative overflow-hidden rounded-2xl;
+  }
+
+  .aurora-border::before {
+    content: '';
+    @apply absolute inset-0 rounded-2xl p-px bg-gradient-to-r from-primary via-primary-glow to-primary;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+/* Advanced Animations */
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 4s ease-in-out infinite;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out;
+  }
+
+  .animate-bounce-gentle {
+    animation: bounceGentle 2s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-20px) rotate(1deg); }
+    50% { transform: translateY(-10px) rotate(0deg); }
+    75% { transform: translateY(-15px) rotate(-1deg); }
+  }
+
+  @keyframes glow {
+    0%, 100% { 
+      box-shadow: 0 0 30px hsl(var(--primary) / 0.3);
+      filter: brightness(1);
+    }
+    50% { 
+      box-shadow: 0 0 60px hsl(var(--primary-glow) / 0.6), 0 0 90px hsl(var(--primary) / 0.4);
+      filter: brightness(1.1);
+    }
+  }
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes bounceGentle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Smooth scrolling */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
   }
 }
