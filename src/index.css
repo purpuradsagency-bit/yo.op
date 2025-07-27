@@ -16,32 +16,32 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 15% 9%;
 
-    /* DAENA Premium Palette */
-    --primary: 270 75% 65%; /* Rich lavender #9f5cd6 */
+    /* DAENA Premium Palette - Azul Eléctrico */
+    --primary: 212 100% 60%; /* #0066FF - Azul eléctrico */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 275 65% 85%; /* Soft lavender highlight */
-    --primary-dark: 265 85% 45%; /* Deep lavender */
-    --primary-glow: 275 90% 75%; /* Ethereal glow */
+    --primary-light: 212 100% 85%; /* Azul suave */
+    --primary-dark: 212 100% 45%; /* Azul profundo */
+    --primary-glow: 220 100% 70%; /* Azul brillante */
     
     /* Enhanced Gradients */
-    --gradient-primary: 270 75% 65%, 275 85% 75%;
-    --gradient-aurora: 270 75% 65%, 280 70% 70%, 290 65% 75%;
-    --gradient-sunset: 315 75% 70%, 270 75% 65%, 225 70% 70%;
+    --gradient-primary: 212 100% 60%, 220 100% 70%;
+    --gradient-aurora: 212 100% 60%, 220 100% 70%, 240 80% 75%;
+    --gradient-sunset: 212 100% 60%, 220 100% 70%, 200 90% 75%;
     
     /* Sophisticated Neutrals */
-    --secondary: 240 15% 97.5%; /* Whisper white */
-    --secondary-foreground: 240 25% 15%;
-    --muted: 240 10% 96%; /* Cloud white */
-    --muted-foreground: 240 15% 45%;
-    --accent: 270 30% 92%; /* Lavender mist */
-    --accent-foreground: 270 50% 20%;
+    --secondary: 210 15% 97.5%; /* Whisper white */
+    --secondary-foreground: 210 25% 15%;
+    --muted: 210 10% 96%; /* Cloud white */
+    --muted-foreground: 210 15% 45%;
+    --accent: 212 30% 92%; /* Azul mist */
+    --accent-foreground: 212 50% 20%;
 
     /* System Colors */
     --destructive: 0 75% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 240 15% 92%;
-    --input: 240 15% 94%;
-    --ring: 270 75% 65%;
+    --border: 212 15% 92%;
+    --input: 212 15% 94%;
+    --ring: 212 100% 60%;
 
     /* Premium Shadows */
     --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
