@@ -173,14 +173,16 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter antialiased;
-    font-feature-settings: "cv11", "ss01";
-    font-variation-settings: "opsz" 32;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv11", "ss01", "ss02";
+    font-variation-settings: "wght" 400;
+    letter-spacing: -0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair;
-    font-feature-settings: "ss01", "ss02";
+    @apply font-display;
+    font-feature-settings: "ss01", "ss02", "cv01";
+    letter-spacing: -0.02em;
   }
 }
 
